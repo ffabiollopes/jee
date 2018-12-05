@@ -88,10 +88,13 @@ public class Product extends Entity {
 		}
 		return str;
 	}
-
 	@Override
 	public String toString() {
-		return "| Produto:" + getId() + ", Prateleira:" + printShelves() + "Valor de Desconto:" + discountValue + ", iva:"
-				+ iva + ", pvp:" + pvp + " |";
+		return "Product [shelves=" + shelves + ", discountValue=" + discountValue + ", iva=" + iva + ", pvp=" + pvp
+				+ ", printShelves=" + printShelves() + "]";
 	}
+	
+	
+
+	
 }

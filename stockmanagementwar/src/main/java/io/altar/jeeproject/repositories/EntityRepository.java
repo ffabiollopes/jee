@@ -17,10 +17,11 @@ public class EntityRepository <T extends Entity> {
 	private Map<Long, T> map = new HashMap<Long, T>();
 	
 	//Method to create Products/Shelves and give an automatic id
-	public void save(T entity) {
+	public T save(T entity) {
 		entity.setId(actualId);
 		map.put(entity.getId(), entity);
 		actualId++;
+		return entity;
 	}
 	
 	//Method to save a shelf on Product creation
@@ -44,9 +45,10 @@ public class EntityRepository <T extends Entity> {
 		return map.values();
 	}
 	
-	//Not in use - Method to update all Products/Shelves
-	public void update(T entity) {
+	//Method to update all Products/Shelves
+	public T update(T entity) {
 		map.replace(entity.getId(), entity);
+		return entity;
 	}
 }
 

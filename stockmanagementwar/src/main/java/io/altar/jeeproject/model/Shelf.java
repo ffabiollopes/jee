@@ -10,30 +10,31 @@ public class Shelf extends Entity{
 	 */
 	private static final long serialVersionUID = 1L;
 	//Variables
-	private List <Product> product;
+	private Product product = null;
 	private int capacity;
 	private int dailyRentPrice;
 	public Shelf() {}
 	/**
 	 * @param capacity
 	 * @param dailyRentPrice
+	 * @param product  
+	 * @param product 
 	 */
 	public Shelf(int capacity,int dailyRentPrice) {
 		super();
-		this.product = new ArrayList<>();
 		this.capacity = capacity;
 		this.dailyRentPrice = dailyRentPrice;
 	}
 	/**
 	 * @return the product
 	 */
-	public List<Product> getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 	/**
 	 * @param product the product to set
 	 */
-	public void setProduct(List<Product> product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 	/**
@@ -63,18 +64,19 @@ public class Shelf extends Entity{
 	/**
 	 * @return str Products in string
 	 */
-	private String printProducts() {
-		String str = "";
-
-		for (int i = 0; i < this.product.size(); i++) {
-			str += this.product.get(i).getId();
-			str += ", ";
-		}
-		return str;
-	}
+//	private String printProducts() {
+//		String str = "";
+//
+//		for (int i = 0; i < this.product.size(); i++) {
+//			str += this.product.get(i).getId();
+//			str += ", ";
+//		}
+//		return str;
+//	}
 	@Override
 	public String toString() {
-		return "| Shelf:"+getId()+ ", capacity:" + capacity + ", productInShelf:" + printProducts() + ", dailyRentPrice:"
-				+ dailyRentPrice + " |";
+		return "Shelf [product=" + product + ", capacity=" + capacity + ", dailyRentPrice=" + dailyRentPrice + "]";
 	}
+	
+	
 }
