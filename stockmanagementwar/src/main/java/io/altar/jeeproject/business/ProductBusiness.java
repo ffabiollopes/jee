@@ -34,8 +34,8 @@ public class ProductBusiness {
 			return productRepository.update(product);
 		}
 		
-		public List<Shelf> consultShelfProductById(Long input) {
-			List<Shelf> list = productRepository.findById(input).getShelves();
+		public List<Long> consultShelfProductById(Long input) {
+			List<Long> list = productRepository.findById(input).getShelves();
 			return list;
 		}
 	}
