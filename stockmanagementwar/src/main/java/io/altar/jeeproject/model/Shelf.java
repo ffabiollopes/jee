@@ -1,5 +1,8 @@
 package io.altar.jeeproject.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Shelf extends Entity{
 	/**
@@ -10,13 +13,13 @@ public class Shelf extends Entity{
 	private Product product = null;
 	private int capacity;
 	private int dailyRentPrice;
+	public Shelf() {}
 	/**
 	 * @param capacity
 	 * @param dailyRentPrice
 	 * @param product  
 	 * @param product 
 	 */
-	public Shelf() {}
 	public Shelf(int capacity,int dailyRentPrice) {
 		super();
 		this.capacity = capacity;
