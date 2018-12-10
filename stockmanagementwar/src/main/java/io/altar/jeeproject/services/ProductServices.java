@@ -13,6 +13,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import io.altar.jeeproject.DTO.ProductDTO;
+import io.altar.jeeproject.DTO.ShelfDTO;
 import io.altar.jeeproject.business.ProductBusiness;
 import io.altar.jeeproject.model.Product;
 import io.altar.jeeproject.model.Shelf;
@@ -34,7 +36,7 @@ public class ProductServices {
 	@GET
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Product consultProductByIdServices(@PathParam("id") Long id) {
+	public ProductDTO consultProductByIdServices(@PathParam("id") Long id) {
 			return productBusiness.consultProductById(id);
 	}
 	@GET
@@ -46,7 +48,7 @@ public class ProductServices {
 	@GET
 	@Path("shelves/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Shelf> consultShelfofProduct(@PathParam("id") Long id) {
+	public List<ShelfDTO> consultShelfofProduct(@PathParam("id") Long id) {
 			return productBusiness.consultShelfProductById(id);
 	}
 	
