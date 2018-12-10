@@ -3,7 +3,6 @@ package io.altar.jeeproject.business;
 
 import java.util.Collection;
 
-import io.altar.jeeproject.model.Product;
 import io.altar.jeeproject.model.Shelf;
 import io.altar.jeeproject.repositories.ShelfRepository;
 
