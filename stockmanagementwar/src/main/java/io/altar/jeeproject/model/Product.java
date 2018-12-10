@@ -9,7 +9,7 @@ public class Product extends Entity {
 	 */
 	private static final long serialVersionUID = 1L;
 	//Variables
-	private List<Shelf> shelves;
+	private List<Long> shelves;
 	private int discountValue;
 	private int iva;
 	private int pvp;
@@ -30,13 +30,13 @@ public class Product extends Entity {
 	/**
 	 * @return the shelves
 	 */
-	public List<Shelf> getShelves() {
+	public List<Long> getShelves() {
 		return shelves;
 	}
 	/**
 	 * @param shelves
 	 */
-	public void addShelves(List<Shelf> shelves) {
+	public void addShelves(List<Long> shelves) {
 		this.shelves = shelves;
 	}
 	/**
@@ -76,23 +76,23 @@ public class Product extends Entity {
 		this.pvp = pvp;
 	}
 
-	/**
-	 * @return str Shelves in string
-	 */
-	private String printShelves() {
-		String str = "";
-
-		for (int i = 0; i < this.shelves.size(); i++) {
-			str += this.shelves.get(i).getId();
-			str += ", ";
-		}
-		return str;
-	}
-	@Override
-	public String toString() {
-		return "Product [shelves=" + shelves + ", discountValue=" + discountValue + ", iva=" + iva + ", pvp=" + pvp
-				+ ", printShelves=" + printShelves() + "]";
-	}
+//	/**
+//	 * @return str Shelves in string
+//	 */
+//	private String printShelves() {
+//		String str = "";
+//
+//		for (int i = 0; i < this.shelves.size(); i++) {
+//			str += this.shelves.get(i).getId();
+//			str += ", ";
+//		}
+//		return str;
+//	}
+//	@Override
+//	public String toString() {
+//		return "Product [shelves=" + shelves + ", discountValue=" + discountValue + ", iva=" + iva + ", pvp=" + pvp
+//				+ ", printShelves=" + printShelves() + "]";
+//	}
 	
 	
 
